@@ -48,7 +48,7 @@
                 </thead>
 
                 <tbody>
-                    @foreach ($students as $student)
+                    @forelse ($students as $student)
                         <tr class="border-b border-[#EFEDE6] hover:bg-[#FAF9F5]">
 
                             <td class="px-5 py-4 font-display text-lg text-[#A16207]">
@@ -101,7 +101,12 @@
                             </td>
 
                         </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                        <td colspan="6" class="text-center p-4">Data Siswa Tidak Tersedia</td>
+                    </tr>
+                    @endforelse
+                    
 
                 </tbody>
 
